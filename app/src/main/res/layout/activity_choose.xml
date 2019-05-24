@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bencorp.slowmo.ChooseActivity">
+
+    <LinearLayout
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/video_card"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            />
+        <TextView
+            android:id="@+id/video_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Select video"
+            android:gravity="center"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        >
+        <ProgressBar
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:max="100"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/loading_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorAccent"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/song_card"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            />
+        <TextView
+            android:id="@+id/song_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Select Song"
+            android:gravity="center"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            />
+
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</LinearLayout>
